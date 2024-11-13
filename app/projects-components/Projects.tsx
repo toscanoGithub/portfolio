@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import Link from 'next/link'
-import { log } from 'console'
 import { Separator } from '@/components/ui/separator'
 import "../globals.css";
 

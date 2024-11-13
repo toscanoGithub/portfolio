@@ -3,7 +3,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import Projects from "@/app/projects-components/Projects";
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
