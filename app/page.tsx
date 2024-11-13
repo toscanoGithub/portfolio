@@ -20,14 +20,17 @@ export default function Home() {
     });
   }
 
-  const handleItemSelect = (e) => {
+  const handleItemSelect = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const target = e.target as HTMLButtonElement;
     // Get the data-index of the clicked button
-    const index: string = e.target.getAttribute('data-index');
+    const index: string | null = target.getAttribute('data-index');
     console.log(`Button ${index} clicked`);  // Logs the index of the clicked button
-    e.target.classList.remove("text-[#DEAE9E]")
-    e.target.classList.add("text-white")
-    setActiveIndex(index)
-    resetColorOfOtherButtons(index)
+    if (index !== null) {
+      target.classList.remove("text-[#DEAE9E]");
+      target.classList.add("text-white");
+      setActiveIndex(index);
+      resetColorOfOtherButtons(index);
+  }
   };
 
     
